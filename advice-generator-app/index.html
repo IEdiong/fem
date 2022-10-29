@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png" />
+
+    <title>Frontend Mentor | Advice generator app</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;800&display=swap" rel="stylesheet" />
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="./dist/output.css" />
+
+    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+    <style>
+      .attribution {
+        font-size: 11px;
+        text-align: center;
+      }
+      .attribution a {
+        color: hsl(228, 45%, 44%);
+      }
+    </style>
+
+    <!-- JavaScript -->
+    <script src="./scripts/index.js" defer></script>
+  </head>
+  <body class="bg-body">
+    <header class="sr-only"><h1>Advice Generator App</h1></header>
+    <main class="h-screen grid place-content-center">
+      <article class="w-[500px] bg-article p-8 rounded-2xl">
+        <div class="flex flex-col gap-2 items-center text-center">
+          <h2 class="text-neon uppercase">
+            Advice #<span id="quote-author"><!-- Advice ID goes here --></span>
+          </h2>
+          <p class="text-white" id="quote">"<!-- Advice text goes here -->"</p>
+          <img class="mb-4" src="./images/pattern-divider-mobile.svg" alt="pattern divider" />
+          <button class="bg-neon p-4 rounded-full -mb-[68px]" id="dice"><img src="./images/icon-dice.svg" alt="dice" /></button>
+        </div>
+      </article>
+    </main>
+
+    <!-- <div class="attribution">Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. Coded by <a href="#">Your Name Here</a>.</div> -->
+  </body>
+</html>

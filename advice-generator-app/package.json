@@ -1,0 +1,14 @@
+{
+  "name": "advice-generator-app",
+  "version": "1.0.0",
+  "description": "Advice generator app",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Ediongsenyene Joseph",
+  "license": "ISC",
+  "devDependencies": {
+    "tailwindcss": "^3.2.1"
+  }
+}
