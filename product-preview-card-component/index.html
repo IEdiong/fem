@@ -9,6 +9,14 @@
 
     <title>Frontend Mentor | Product preview card component</title>
 
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,700&family=Montserrat:wght@500;700&display=swap" rel="stylesheet" />
+
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="./styles/style.css" />
+
     <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
     <style>
       .attribution {
@@ -24,22 +32,32 @@
     <header class="sr-only">
       <h1>Product preview card component</h1>
     </header>
-    <main>
-      <article>
-        <img src="" alt="" srcset="" />
-        <header>
-          <p>Perfume</p>
-          <h2>Gabrielle Essence Eau De Parfum</h2>
-        </header>
-        <div>
-          <p>A floral, solar and voluptuous interpretation composed by Olivier Polge, Perfumer-Creator for the House of CHANEL.</p>
-          <p>$149.99 $169.99</p>
+    <main class="main container">
+      <article class="card">
+        <div class="card__img">
+          <img
+            src="./images/image-product-mobile.jpg"
+            alt="Gabrielle perfume"
+            width="686"
+            height="480"
+            loading="lazy"
+            srcset="./images/image-product-mobile.jpg 686w, ./images/image-product-desktop.jpg 600w"
+            sizes="(min-width: 1024px) 33vw, 600vw"
+          />
         </div>
-        <button>Add to Cart</button>
+        <div class="card-content">
+          <header class="card__heading">
+            <p>Perfume</p>
+            <h2>Gabrielle Essence Eau De Parfum</h2>
+          </header>
+          <p class="card__text">A floral, solar and voluptuous interpretation composed by Olivier Polge, Perfumer-Creator for the House of CHANEL.</p>
+          <p class="card__price"><span class="discount-price"> $149.99 </span> <span class="old-price">$169.99</span></p>
+          <button class="btn"><img src="./images/icon-cart.svg" />Add to Cart</button>
+        </div>
       </article>
     </main>
-    <footer>
-      <div class="attribution">Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. Coded by <a href="#">Your Name Here</a>.</div>
+    <footer class="footer">
+      <div class="attribution">Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. Coded by <a href="https://frontendmentor.io/profile/iediong">Ediongsenyene Joseph</a>.</div>
     </footer>
   </body>
 </html>
