@@ -35,15 +35,20 @@
     <main class="main container">
       <article class="card">
         <div class="card__img">
-          <img
+          <!-- <img
             src="./images/image-product-mobile.jpg"
             alt="Gabrielle perfume"
             width="686"
             height="480"
             loading="lazy"
             srcset="./images/image-product-mobile.jpg 686w, ./images/image-product-desktop.jpg 600w"
-            sizes="(min-width: 1024px) 33vw, 600vw"
-          />
+            sizes="(min-width: 1024px) 600vw, 686vw"
+          /> -->
+
+          <picture>
+            <source srcset="./images/image-product-desktop.jpg" media="(min-width: 1024px)" width="400" />
+            <img src="./images/image-product-mobile.jpg" alt="Gabrielle perfume" width="686" />
+          </picture>
         </div>
         <div class="card-content">
           <header class="card__heading">
