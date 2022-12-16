@@ -2,10 +2,11 @@
 const defaultTheme = require('tailwindcss/defaultTheme');
 
 module.exports = {
-  content: ['./index.html', './scripts/*.js'],
+  content: ['./src/index.html', './src/scripts/*.js'],
   theme: {
     extend: {
       colors: {
+        // light mode
         'bright-blue': 'hsl(220, 98%, 61%)',
         'check-start': 'hsl(192, 100%, 67%)',
         'check-end': 'hsl(280, 87%, 65%)',
@@ -14,6 +15,8 @@ module.exports = {
         'dark-gray': 'hsl(233, 11%, 84%)',
         'dark-gray-50': 'hsl(236, 9%, 61%)',
         'dark-gray-100': 'hsl(235, 19%, 35%)',
+
+        // dark mode
       },
       backgroundImage: {
         'mobile-lg': "url('/images/bg-mobile-light.jpg')",

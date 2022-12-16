@@ -747,18 +747,14 @@ video {
   color: hsl(0 0% 98% / var(--tw-text-opacity));
 }
 
+.text-dark-gray-100 {
+  --tw-text-opacity: 1;
+  color: hsl(235 19% 35% / var(--tw-text-opacity));
+}
+
 .text-dark-gray-50 {
   --tw-text-opacity: 1;
   color: hsl(236 9% 61% / var(--tw-text-opacity));
-}
-
-.text-dark-gray {
-  --tw-text-opacity: 1;
-  color: hsl(233 11% 84% / var(--tw-text-opacity));
-}
-
-.line-through {
-  text-decoration-line: line-through;
 }
 
 .shadow-3xl {
@@ -914,16 +910,6 @@ video {
 .hover\:before\:bg-gradient-to-br:hover::before {
   content: var(--tw-content);
   background-image: linear-gradient(to bottom right, var(--tw-gradient-stops));
-}
-
-.hover\:after\:bg-transparent:hover::after {
-  content: var(--tw-content);
-  background-color: transparent;
-}
-
-.hover\:checked\:after\:bg-transparent:checked:hover::after {
-  content: var(--tw-content);
-  background-color: transparent;
 }
 
 .focus\:outline-none:focus {
