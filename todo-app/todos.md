@@ -20,11 +20,11 @@ The designs were created to the following widths:
 
 #### Light Theme
 
-- [ ] Very Light Gray: hsl(0, 0%, 98%)
-- [ ] Very Light Grayish Blue: hsl(236, 33%, 92%)
+- [x] Very Light Gray: hsl(0, 0%, 98%)
+- [x] Very Light Grayish Blue: hsl(236, 33%, 92%)
 - [ ] Light Grayish Blue: hsl(233, 11%, 84%)
-- [ ] Dark Grayish Blue: hsl(236, 9%, 61%)
-- [ ] Very Dark Grayish Blue: hsl(235, 19%, 35%)
+- [x] Dark Grayish Blue: hsl(236, 9%, 61%)
+- [x] Very Dark Grayish Blue: hsl(235, 19%, 35%)
 
 #### Dark Theme
 

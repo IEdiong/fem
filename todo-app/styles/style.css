@@ -662,9 +662,9 @@ video {
   border-width: 1px;
 }
 
-.bg-white {
+.bg-light-gray {
   --tw-bg-opacity: 1;
-  background-color: rgb(255 255 255 / var(--tw-bg-opacity));
+  background-color: hsl(0 0% 98% / var(--tw-bg-opacity));
 }
 
 .bg-transparent {
@@ -742,14 +742,23 @@ video {
   letter-spacing: .5em;
 }
 
-.text-white {
+.text-light-gray {
   --tw-text-opacity: 1;
-  color: rgb(255 255 255 / var(--tw-text-opacity));
+  color: hsl(0 0% 98% / var(--tw-text-opacity));
 }
 
-.text-gray-500 {
+.text-dark-gray-50 {
   --tw-text-opacity: 1;
-  color: rgb(107 114 128 / var(--tw-text-opacity));
+  color: hsl(236 9% 61% / var(--tw-text-opacity));
+}
+
+.text-dark-gray {
+  --tw-text-opacity: 1;
+  color: hsl(233 11% 84% / var(--tw-text-opacity));
+}
+
+.line-through {
+  text-decoration-line: line-through;
 }
 
 .shadow-3xl {
@@ -798,6 +807,12 @@ video {
   border-radius: 9999px;
 }
 
+.before\:bg-check-gray::before {
+  content: var(--tw-content);
+  --tw-bg-opacity: 1;
+  background-color: hsl(236 33% 92% / var(--tw-bg-opacity));
+}
+
 .before\:content-\[\'\'\]::before {
   --tw-content: '';
   content: var(--tw-content);
@@ -833,6 +848,12 @@ video {
   border-radius: 9999px;
 }
 
+.after\:bg-white::after {
+  content: var(--tw-content);
+  --tw-bg-opacity: 1;
+  background-color: rgb(255 255 255 / var(--tw-bg-opacity));
+}
+
 .after\:content-\[\'\'\]::after {
   --tw-content: '';
   content: var(--tw-content);
@@ -853,6 +874,11 @@ video {
 .checked\:before\:to-check-end:checked::before {
   content: var(--tw-content);
   --tw-gradient-to: hsl(280, 87%, 65%);
+}
+
+.checked\:after\:bg-transparent:checked::after {
+  content: var(--tw-content);
+  background-color: transparent;
 }
 
 .checked\:after\:bg-\[url\(\'\/images\/icon-check\.svg\'\)\]:checked::after {
@@ -880,15 +906,19 @@ video {
   --tw-gradient-to: hsl(280, 87%, 65%);
 }
 
+.hover\:text-dark-gray-100:hover {
+  --tw-text-opacity: 1;
+  color: hsl(235 19% 35% / var(--tw-text-opacity));
+}
+
 .hover\:before\:bg-gradient-to-br:hover::before {
   content: var(--tw-content);
   background-image: linear-gradient(to bottom right, var(--tw-gradient-stops));
 }
 
-.hover\:after\:bg-white:hover::after {
+.hover\:after\:bg-transparent:hover::after {
   content: var(--tw-content);
-  --tw-bg-opacity: 1;
-  background-color: rgb(255 255 255 / var(--tw-bg-opacity));
+  background-color: transparent;
 }
 
 .hover\:checked\:after\:bg-transparent:checked:hover::after {
