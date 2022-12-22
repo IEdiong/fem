@@ -25,8 +25,8 @@ function addTodo(e) {
   const item = todoInput.value;
   e.preventDefault();
   if (item) {
+    renderTodos(item, false);
     saveLocalTodos(item);
-    renderTodos(item);
     todoInput.value = '';
   }
 }
@@ -47,8 +47,11 @@ function checkDelete(e) {
     elClicked.parentElement.classList.toggle('completed');
     const label = elClicked.parentElement.children[1];
 
+    // UI update
     label.classList.toggle('line-through');
     label.classList.toggle('text-dark-gray-50');
+
+    // Localstorage update
   }
 }
 
@@ -63,8 +66,19 @@ function saveLocalTodos(todo) {
     todos = JSON.parse(localStorage.getItem('todos'));
   }
 
+  // // Add new todo
+  // todos.push(todo);
+
+  // // Save to Localstorage
+  // localStorage.setItem('todos', JSON.stringify(todos));
+
+  //////////////////////////////////////////////////////////////
+
   // Add new todo
-  todos.push(todo);
+  todos.push({
+    note: todo,
+    completed: false,
+  });
 
   // Save to Localstorage
   localStorage.setItem('todos', JSON.stringify(todos));
@@ -81,9 +95,20 @@ function getLocalTodos() {
     todos = JSON.parse(localStorage.getItem('todos'));
   }
 
-  todos.forEach((item) => {
-    renderTodos(item);
+  todos.forEach(({ note, completed }) => {
+    renderTodos(note, completed);
   });
+
+  //////////////////////////////////////////////////////////////
+  // const todoEl = document.querySelectorAll('li[data-todo-item]');
+  // const arr = [];
+
+  // todoEl.forEach((el) => {
+  //   arr.push({
+  //     note: el.children[1].textContent,
+  //     completed: false,
+  //   });
+  // });
 }
 
 // Remove from local todos
@@ -99,22 +124,25 @@ function removeLocalTodo(todo) {
 
   const todoText = todo.textContent;
 
-  todos.splice(todos.indexOf(todoText), 1);
+  todos = todos.filter((todo) => todo.note !== todoText);
+  // todos.splice(todos.indexOf(todoText), 1);
+
   // Save to Localstorage
   localStorage.setItem('todos', JSON.stringify(todos));
 }
 
 // Render todo element to the DOM
-function renderTodos(item) {
+function renderTodos(note, completed) {
   const html = `
-        <li class="todo px-3 py-4 w-full flex items-center gap-x-2 text-dark-gray-100">
+        <li class="todo px-3 py-4 w-full flex items-center gap-x-2 text-dark-gray-100" data-todo-item >
         <!-- TODO: fix the focus state -->
         <input
           type="checkbox"
           id="checkbox-${todoId}"
+          ${completed ? 'checked' : ''}
           class="peer appearance-none relative w-5 h-5 rounded-full focus:outline-none shrink-0 before:content-[''] before:w-[22px] before:h-[22px] before:-left-[1px] before:-top-[1px] before:bg-check-gray checked:before:bg-gradient-to-br hover:before:bg-gradient-to-br checked:before:from-check-start checked:before:to-check-end hover:from-check-start hover:to-check-end before:absolute before:rounded-full after:content-[''] after:w-full after:h-full after:left-0 after:top-0 after:bg-white checked:after:bg-center checked:after:bg-no-repeat checked:after:bg-transparent checked:after:bg-[url('/images/icon-check.svg')] after:absolute after:rounded-full cursor-pointer ease-in transition-all"
         />
-        <label for="checkbox-${todoId}" class="w-full md:cursor-pointer">${item}</label>
+        <label for="checkbox-${todoId}" class="w-full md:cursor-pointer">${note}</label>
         <button id="del" class="bg-transparent">
           <img class="pointer-events-none" src="/images/icon-cross.svg" alt="" />
         </button>
