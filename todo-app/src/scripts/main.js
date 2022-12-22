@@ -213,7 +213,6 @@ function displayCompleted() {
   // Get completed todos from localstorage
   let todos = JSON.parse(localStorage.getItem('todos'));
   todos = todos.filter((todo) => todo.completed !== false);
-  console.log(todos);
 
   // Remove elements from the DOM
   document.querySelectorAll('li[data-todo-item]').forEach((el) => {
@@ -227,4 +226,18 @@ function displayCompleted() {
 }
 
 // Show Active
-function displayActive() {}
+function displayActive() {
+  // Get completed todos from localstorage
+  let todos = JSON.parse(localStorage.getItem('todos'));
+  todos = todos.filter((todo) => todo.completed !== true);
+
+  // Remove elements from the DOM
+  document.querySelectorAll('li[data-todo-item]').forEach((el) => {
+    el.remove();
+  });
+
+  // Update UI
+  todos.forEach(({ note, completed }) => {
+    renderTodos(note, completed);
+  });
+}
