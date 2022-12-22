@@ -8,14 +8,18 @@ const todoInput = document.getElementById('todo-input');
 const todoList = document.getElementById('todo-list');
 const form = document.getElementById('todo-form');
 const clearBtn = document.getElementById('clear-completed');
+const all = document.getElementById('all');
 const completed = document.getElementById('completed');
+const active = document.getElementById('active');
 
 // Step 02: Add event listeners
 window.addEventListener('DOMContentLoaded', getLocalTodos);
 form.addEventListener('submit', addTodo);
 todoList.addEventListener('click', checkDelete);
 clearBtn.addEventListener('click', clearCompleted);
+all.addEventListener('change', displayAll);
 completed.addEventListener('change', displayCompleted);
+active.addEventListener('change', displayActive);
 
 // Step 03: Create callback functions
 
@@ -176,6 +180,22 @@ function clearCompleted() {
   let todos = JSON.parse(localStorage.getItem('todos'));
   todos = todos.filter((todo) => todo.completed !== true);
   localStorage.setItem('todos', JSON.stringify(todos));
+
+  // Remove elements from the DOM
+  document.querySelectorAll('li[data-todo-item]').forEach((el) => {
+    el.remove();
+  });
+
+  // Update UI
+  todos.forEach(({ note, completed }) => {
+    renderTodos(note, completed);
+  });
+}
+
+// Show All
+function displayAll() {
+  // Get completed todos from localstorage
+  let todos = JSON.parse(localStorage.getItem('todos'));
 
   // Remove elements from the DOM
   document.querySelectorAll('li[data-todo-item]').forEach((el) => {
