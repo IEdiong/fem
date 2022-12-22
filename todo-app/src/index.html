@@ -42,7 +42,7 @@
     </header>
     <main>
       <div class="container px-6 mx-auto">
-        <form>
+        <form id="todo-form">
           <div class="px-3 py-4 w-full flex justify-between items-center bg-light-gray rounded-md gap-x-4">
             <input type="checkbox" id="todo-check" class="appearance-none w-5 h-5 border rounded-full focus:outline-none" />
             <input type="text" id="todo-input" class="grow text-xs bg-light-gray" placeholder="Create a new todo..." />
@@ -50,18 +50,6 @@
         </form>
         <div id="todo-container" class="mt-3">
           <ul id="todo-list" class="w-full rounded-md text-xs overflow-hidden divide-y shadow-3xl bg-light-gray">
-            <li class="todo px-3 py-4 w-full flex items-center gap-x-2 text-dark-gray-50 font-bold">
-              <!-- TODO: fix the focus state -->
-              <input
-                type="checkbox"
-                id="checkbox1"
-                class="peer appearance-none relative w-5 h-5 rounded-full focus:outline-none shrink-0 before:content-[''] before:w-[22px] before:h-[22px] before:-left-[1px] before:-top-[1px] before:bg-check-gray checked:before:bg-gradient-to-br hover:before:bg-gradient-to-br checked:before:from-check-start checked:before:to-check-end hover:from-check-start hover:to-check-end before:absolute before:rounded-full after:content-[''] after:w-full after:h-full after:left-0 after:top-0 after:bg-white checked:after:bg-center checked:after:bg-no-repeat checked:after:bg-transparent checked:after:bg-[url('/images/icon-check.svg')] after:absolute after:rounded-full cursor-pointer ease-in transition-all"
-              />
-              <label for="checkbox1" class="w-full md:cursor-pointer">Complete online JavaScript course</label>
-              <button class="bg-transparent">
-                <img src="/images/icon-cross.svg" alt="" />
-              </button>
-            </li>
             <li class="px-3 py-4 w-full flex justify-between font-bold text-dark-gray-50">
               <!-- Add dynamic number items left -->
               <span>5 items left</span>
