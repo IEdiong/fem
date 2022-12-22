@@ -26,25 +26,8 @@ function addTodo(e) {
   e.preventDefault();
   if (item) {
     saveLocalTodos(item);
-    const html = `
-        <li class="todo px-3 py-4 w-full flex items-center gap-x-2 text-dark-gray-100">
-        <!-- TODO: fix the focus state -->
-        <input
-          type="checkbox"
-          id="checkbox-${todoId}"
-          class="peer appearance-none relative w-5 h-5 rounded-full focus:outline-none shrink-0 before:content-[''] before:w-[22px] before:h-[22px] before:-left-[1px] before:-top-[1px] before:bg-check-gray checked:before:bg-gradient-to-br hover:before:bg-gradient-to-br checked:before:from-check-start checked:before:to-check-end hover:from-check-start hover:to-check-end before:absolute before:rounded-full after:content-[''] after:w-full after:h-full after:left-0 after:top-0 after:bg-white checked:after:bg-center checked:after:bg-no-repeat checked:after:bg-transparent checked:after:bg-[url('/images/icon-check.svg')] after:absolute after:rounded-full cursor-pointer ease-in transition-all"
-        />
-        <label for="checkbox-${todoId}" class="w-full md:cursor-pointer">${item}</label>
-        <button id="del" class="bg-transparent">
-          <img class="pointer-events-none" src="/images/icon-cross.svg" alt="" />
-        </button>
-      </li>
-        `;
-
-    todoList.insertAdjacentHTML('afterbegin', html);
-
+    renderTodos(item);
     todoInput.value = '';
-    todoId++;
   }
 }
 
@@ -65,6 +48,7 @@ function checkDelete(e) {
     const label = elClicked.parentElement.children[1];
 
     label.classList.toggle('line-through');
+    label.classList.toggle('text-dark-gray-50');
   }
 }
 
@@ -98,23 +82,7 @@ function getLocalTodos() {
   }
 
   todos.forEach((item) => {
-    const html = `
-        <li class="todo px-3 py-4 w-full flex items-center gap-x-2 text-dark-gray-100">
-        <!-- TODO: fix the focus state -->
-        <input
-          type="checkbox"
-          id="checkbox-${todoId}"
-          class="peer appearance-none relative w-5 h-5 rounded-full focus:outline-none shrink-0 before:content-[''] before:w-[22px] before:h-[22px] before:-left-[1px] before:-top-[1px] before:bg-check-gray checked:before:bg-gradient-to-br hover:before:bg-gradient-to-br checked:before:from-check-start checked:before:to-check-end hover:from-check-start hover:to-check-end before:absolute before:rounded-full after:content-[''] after:w-full after:h-full after:left-0 after:top-0 after:bg-white checked:after:bg-center checked:after:bg-no-repeat checked:after:bg-transparent checked:after:bg-[url('/images/icon-check.svg')] after:absolute after:rounded-full cursor-pointer ease-in transition-all"
-        />
-        <label for="checkbox-${todoId}" class="w-full md:cursor-pointer">${item}</label>
-        <button id="del" class="bg-transparent">
-          <img class="pointer-events-none" src="/images/icon-cross.svg" alt="" />
-        </button>
-      </li>
-        `;
-
-    todoList.insertAdjacentHTML('afterbegin', html);
-    todoId++;
+    renderTodos(item);
   });
 }
 
@@ -134,4 +102,25 @@ function removeLocalTodo(todo) {
   todos.splice(todos.indexOf(todoText), 1);
   // Save to Localstorage
   localStorage.setItem('todos', JSON.stringify(todos));
+}
+
+// Render todo element to the DOM
+function renderTodos(item) {
+  const html = `
+        <li class="todo px-3 py-4 w-full flex items-center gap-x-2 text-dark-gray-100">
+        <!-- TODO: fix the focus state -->
+        <input
+          type="checkbox"
+          id="checkbox-${todoId}"
+          class="peer appearance-none relative w-5 h-5 rounded-full focus:outline-none shrink-0 before:content-[''] before:w-[22px] before:h-[22px] before:-left-[1px] before:-top-[1px] before:bg-check-gray checked:before:bg-gradient-to-br hover:before:bg-gradient-to-br checked:before:from-check-start checked:before:to-check-end hover:from-check-start hover:to-check-end before:absolute before:rounded-full after:content-[''] after:w-full after:h-full after:left-0 after:top-0 after:bg-white checked:after:bg-center checked:after:bg-no-repeat checked:after:bg-transparent checked:after:bg-[url('/images/icon-check.svg')] after:absolute after:rounded-full cursor-pointer ease-in transition-all"
+        />
+        <label for="checkbox-${todoId}" class="w-full md:cursor-pointer">${item}</label>
+        <button id="del" class="bg-transparent">
+          <img class="pointer-events-none" src="/images/icon-cross.svg" alt="" />
+        </button>
+      </li>
+        `;
+
+  todoList.insertAdjacentHTML('afterbegin', html);
+  todoId++;
 }
