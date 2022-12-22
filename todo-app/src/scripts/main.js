@@ -8,12 +8,14 @@ const todoInput = document.getElementById('todo-input');
 const todoList = document.getElementById('todo-list');
 const form = document.getElementById('todo-form');
 const clearBtn = document.getElementById('clear-completed');
+const completed = document.getElementById('completed');
 
 // Step 02: Add event listeners
 window.addEventListener('DOMContentLoaded', getLocalTodos);
 form.addEventListener('submit', addTodo);
 todoList.addEventListener('click', checkDelete);
 clearBtn.addEventListener('click', clearCompleted);
+completed.addEventListener('change', displayCompleted);
 
 // Step 03: Create callback functions
 
@@ -187,7 +189,22 @@ function clearCompleted() {
 }
 
 // Show completed
-function displayCompleted() {}
+function displayCompleted() {
+  // Get completed todos from localstorage
+  let todos = JSON.parse(localStorage.getItem('todos'));
+  todos = todos.filter((todo) => todo.completed !== false);
+  console.log(todos);
+
+  // Remove elements from the DOM
+  document.querySelectorAll('li[data-todo-item]').forEach((el) => {
+    el.remove();
+  });
+
+  // Update UI
+  todos.forEach(({ note, completed }) => {
+    renderTodos(note, completed);
+  });
+}
 
 // Show Active
 function displayActive() {}
