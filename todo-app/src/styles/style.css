@@ -572,6 +572,26 @@ video {
   margin-right: auto;
 }
 
+.mx-\[1px\] {
+  margin-left: 1px;
+  margin-right: 1px;
+}
+
+.my-\[1px\] {
+  margin-top: 1px;
+  margin-bottom: 1px;
+}
+
+.mx-\[2px\] {
+  margin-left: 2px;
+  margin-right: 2px;
+}
+
+.my-\[2px\] {
+  margin-top: 2px;
+  margin-bottom: 2px;
+}
+
 .mt-11 {
   margin-top: 2.75rem;
 }
@@ -614,6 +634,10 @@ video {
 
 .shrink-0 {
   flex-shrink: 0;
+}
+
+.shrink {
+  flex-shrink: 1;
 }
 
 .grow {
@@ -723,6 +747,10 @@ video {
   background-repeat: no-repeat;
 }
 
+.p-1 {
+  padding: 0.25rem;
+}
+
 .px-6 {
   padding-left: 1.5rem;
   padding-right: 1.5rem;
@@ -736,6 +764,16 @@ video {
 .py-4 {
   padding-top: 1rem;
   padding-bottom: 1rem;
+}
+
+.px-2 {
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+}
+
+.px-1 {
+  padding-left: 0.25rem;
+  padding-right: 0.25rem;
 }
 
 .pt-0\.5 {
@@ -881,6 +919,11 @@ video {
   top: 0px;
 }
 
+.after\:right-0::after {
+  content: var(--tw-content);
+  right: 0px;
+}
+
 .after\:h-full::after {
   content: var(--tw-content);
   height: 100%;
@@ -989,6 +1032,18 @@ video {
 }
 
 @media (min-width: 640px) {
+  .sm\:mt-20 {
+    margin-top: 5rem;
+  }
+
+  .sm\:mt-6 {
+    margin-top: 1.5rem;
+  }
+
+  .sm\:max-w-xl {
+    max-width: 36rem;
+  }
+
   .sm\:bg-desktop-lg {
     background-image: url('/images/bg-desktop-light.jpg');
   }
