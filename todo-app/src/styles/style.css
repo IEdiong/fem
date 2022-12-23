@@ -598,6 +598,10 @@ video {
   margin-top: 2rem;
 }
 
+.inline {
+  display: inline;
+}
+
 .flex {
   display: flex;
 }
@@ -987,6 +991,11 @@ video {
 
 .dark .dark\:divide-current > :not([hidden]) ~ :not([hidden]) {
   border-color: currentColor;
+}
+
+.dark .dark\:divide-dark-grayish-blue > :not([hidden]) ~ :not([hidden]) {
+  --tw-divide-opacity: 1;
+  border-color: hsl(234 11% 52% / var(--tw-divide-opacity));
 }
 
 .dark .dark\:bg-v-dark-blue {
