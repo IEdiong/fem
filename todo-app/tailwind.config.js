@@ -25,21 +25,21 @@ module.exports = {
         'hv-light-grayish-blue': 'hsl(236, 33%, 92%)',
         'dark-grayish-blue': 'hsl(234, 11%, 52%)',
       },
-      backgroundImage: {
-        'mobile-lg': "url('/images/bg-mobile-light.jpg')",
-        'mobile-dark': "url('/images/bg-mobile-dark.jpg')",
-        'desktop-lg': "url('/images/bg-desktop-light.jpg')",
-        'desktop-dark': "url('/images/bg-desktop-dark.jpg')",
-        'icon-check': "url('/images/icon-check.svg')",
-        'icon-moon': "url('/images/icon-moon.svg')",
-        'icon-sun': "url('/images/icon-sun.svg')",
-      },
-      fontFamily: {
-        sans: ['Josefin Sans', ...defaultTheme.fontFamily.sans],
-      },
-      boxShadow: {
-        '3xl': '0px 5px 30px 1px rgba(0,0,0,0.1)',
-      },
+    },
+    backgroundImage: {
+      'mobile-lg': "url('/images/bg-mobile-light.jpg')",
+      'mobile-dark': "url('/images/bg-mobile-dark.jpg')",
+      'desktop-lg': "url('/images/bg-desktop-light.jpg')",
+      'desktop-dark': "url('/images/bg-desktop-dark.jpg')",
+      'icon-check': "url('/images/icon-check.svg')",
+      'icon-moon': "url('/images/icon-moon.svg')",
+      'icon-sun': "url('/images/icon-sun.svg')",
+    },
+    fontFamily: {
+      sans: ['Josefin Sans', ...defaultTheme.fontFamily.sans],
+    },
+    boxShadow: {
+      '3xl': '0px 5px 30px 1px rgba(0,0,0,0.1)',
     },
   },
   plugins: [],
