@@ -20,6 +20,7 @@ module.exports = {
       },
       backgroundImage: {
         'mobile-lg': "url('/images/bg-mobile-light.jpg')",
+        'desktop-lg': "url('/images/bg-desktop-light.jpg')",
         'icon-check': "url('/images/icon-check.svg')",
       },
       fontFamily: {

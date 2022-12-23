@@ -608,6 +608,10 @@ video {
   width: 1.25rem;
 }
 
+.max-w-2xl {
+  max-width: 42rem;
+}
+
 .shrink-0 {
   flex-shrink: 0;
 }
@@ -685,6 +689,34 @@ video {
 
 .bg-contain {
   background-size: contain;
+}
+
+.bg-\[length\:200px_100px\] {
+  background-size: 200px 100px;
+}
+
+.bg-\[length\:auto_100px\] {
+  background-size: auto 100px;
+}
+
+.bg-\[length\:100\%_100px\] {
+  background-size: 100% 100px;
+}
+
+.bg-\[length\:cover_100px\] {
+  background-size: cover 100px;
+}
+
+.bg-\[length\:100px_100\%\] {
+  background-size: 100px 100%;
+}
+
+.bg-cover {
+  background-size: cover;
+}
+
+.bg-auto {
+  background-size: auto;
 }
 
 .bg-no-repeat {
@@ -952,8 +984,120 @@ video {
   color: hsl(220 98% 61% / var(--tw-text-opacity));
 }
 
+@media (min-width: 640px) {
+  .sm\:bg-desktop-lg {
+    background-image: url('/images/bg-desktop-light.jpg');
+  }
+}
+
 @media (min-width: 768px) {
+  .md\:container {
+    width: 100%;
+  }
+
+  @media (min-width: 640px) {
+    .md\:container {
+      max-width: 640px;
+    }
+  }
+
+  @media (min-width: 768px) {
+    .md\:container {
+      max-width: 768px;
+    }
+  }
+
+  @media (min-width: 1024px) {
+    .md\:container {
+      max-width: 1024px;
+    }
+  }
+
+  @media (min-width: 1280px) {
+    .md\:container {
+      max-width: 1280px;
+    }
+  }
+
+  @media (min-width: 1536px) {
+    .md\:container {
+      max-width: 1536px;
+    }
+  }
+
+  .md\:mt-14 {
+    margin-top: 3.5rem;
+  }
+
+  .md\:mt-16 {
+    margin-top: 4rem;
+  }
+
+  .md\:mb-10 {
+    margin-bottom: 2.5rem;
+  }
+
+  .md\:mb-11 {
+    margin-bottom: 2.75rem;
+  }
+
+  .md\:mt-20 {
+    margin-top: 5rem;
+  }
+
+  .md\:h-full {
+    height: 100%;
+  }
+
+  .md\:w-full {
+    width: 100%;
+  }
+
+  .md\:max-w-2xl {
+    max-width: 42rem;
+  }
+
+  .md\:max-w-xl {
+    max-width: 36rem;
+  }
+
+  .md\:shrink-0 {
+    flex-shrink: 0;
+  }
+
+  .md\:shrink {
+    flex-shrink: 1;
+  }
+
   .md\:cursor-pointer {
     cursor: pointer;
+  }
+
+  .md\:bg-desktop-lg {
+    background-image: url('/images/bg-desktop-light.jpg');
+  }
+
+  .md\:bg-contain {
+    background-size: contain;
+  }
+
+  .md\:text-4xl {
+    font-size: 2.25rem;
+    line-height: 2.5rem;
+  }
+
+  .md\:text-3xl {
+    font-size: 1.875rem;
+    line-height: 2.25rem;
+  }
+
+  .md\:text-xl {
+    font-size: 1.25rem;
+    line-height: 1.75rem;
+  }
+
+  .md\:text-2xl {
+    font-size: 1.5rem;
+    line-height: 2rem;
   }
 }
