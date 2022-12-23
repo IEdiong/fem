@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" class="dark font-sans">
+<html lang="en" class="font-sans">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -32,13 +32,13 @@
     </style>
   </head>
 
-  <body class="bg-mobile-lg dark:bg-mobile-dark dark:bg-v-dark-blue bg-contain md:bg-desktop-lg dark:md:bg-desktop-dark min-h-screen bg-no-repeat md:bg-contain text-lg pt-0.5 dark:text-light-grayish-blue">
+  <body
+    class="bg-mobile-lg dark:bg-mobile-dark dark:bg-v-dark-blue bg-contain md:bg-desktop-lg dark:md:bg-desktop-dark min-h-screen bg-no-repeat md:bg-contain text-lg pt-0.5 dark:text-light-grayish-blue transition motion-reduce:transition-none ease-linear"
+  >
     <header class="mt-11 mb-8 md:mt-20 md:mb-11">
       <div class="container mx-auto sm:max-w-xl px-6 flex justify-between items-center">
         <h1 class="uppercase tracking-[.5em] text-light-gray text-2xl md:text-4xl font-bold">Todo</h1>
-        <button id="theme-toggle">
-          <img src="./images/icon-moon.svg" alt="theme toggler" />
-        </button>
+        <button id="theme-toggle" class="bg-icon-moon dark:bg-icon-sun bg-no-repeat bg-center h-8 w-8"></button>
       </div>
     </header>
     <main>
@@ -63,15 +63,15 @@
           <legend class="sr-only">Filter:</legend>
           <div>
             <input type="radio" name="state" id="all" checked aria-checked="true" class="peer/all appearance-none" />
-            <label for="all" class="peer-checked/all:text-bright-blue hover:text-dark-gray-100 cursor-pointer">All</label>
+            <label for="all" class="peer-checked/all:text-bright-blue hover:text-dark-gray-100 dark:hover:text-hv-light-grayish-blue cursor-pointer">All</label>
           </div>
           <div>
             <input type="radio" name="state" id="active" class="peer/active appearance-none" />
-            <label for="active" class="peer-checked/active:text-bright-blue hover:text-dark-gray-100 cursor-pointer">Active</label>
+            <label for="active" class="peer-checked/active:text-bright-blue hover:text-dark-gray-100 dark:hover:text-hv-light-grayish-blue cursor-pointer">Active</label>
           </div>
           <div>
             <input type="radio" name="state" id="completed" class="peer/completed appearance-none" />
-            <label for="completed" class="peer-checked/completed:text-bright-blue hover:text-dark-gray-100 cursor-pointer">Completed</label>
+            <label for="completed" class="peer-checked/completed:text-bright-blue hover:text-dark-gray-100 dark:hover:text-hv-light-grayish-blue cursor-pointer">Completed</label>
           </div>
         </fieldset>
       </div>

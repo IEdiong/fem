@@ -17,6 +17,3 @@
 
 # Avoid node_modules
 /node_modules
-
-# Avoid .vscode
-/.vscode

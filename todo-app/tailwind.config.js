@@ -31,6 +31,8 @@ module.exports = {
         'desktop-lg': "url('/images/bg-desktop-light.jpg')",
         'desktop-dark': "url('/images/bg-desktop-dark.jpg')",
         'icon-check': "url('/images/icon-check.svg')",
+        'icon-moon': "url('/images/icon-moon.svg')",
+        'icon-sun': "url('/images/icon-sun.svg')",
       },
       fontFamily: {
         sans: ['Josefin Sans', ...defaultTheme.fontFamily.sans],

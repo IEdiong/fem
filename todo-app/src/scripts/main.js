@@ -167,11 +167,15 @@ function renderTodos(note, completed) {
   todoId++;
 }
 
-// Render Items left
+// Render number of items left
 function renderItemsLeft() {
-  const todos = JSON.parse(localStorage.getItem('todos'));
-  const itemsLeft = todos.filter((todo) => todo.completed === false).length;
-  document.getElementById('items-left').children[0].textContent = itemsLeft;
+  if (localStorage.getItem('todos')) {
+    const todos = JSON.parse(localStorage.getItem('todos'));
+    const itemsLeft = todos.filter((todo) => todo.completed === false).length;
+    document.getElementById('items-left').children[0].textContent = itemsLeft;
+  } else {
+    document.getElementById('items-left').children[0].textContent = 0;
+  }
 }
 
 // Clear completed
