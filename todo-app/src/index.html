@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" class="font-sans">
+<html lang="en" class="font-sans dark">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -46,6 +46,7 @@
         <form id="todo-form">
           <div class="px-3 md:px-6 py-4 w-full flex justify-between items-center bg-light-gray dark:bg-desat-blue rounded-md gap-x-4 dark:text-hv-light-grayish-blue">
             <input type="checkbox" id="todo-check" class="appearance-none w-5 h-5 border rounded-full focus:outline-none" />
+            <label for="todo-check" class="sr-only">todo input</label>
             <input type="text" id="todo-input" class="grow text-xs bg-light-gray dark:bg-desat-blue md:text-xl focus:outline-none" placeholder="Create a new todo..." />
           </div>
         </form>
