@@ -14,8 +14,11 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;600&display=swap" rel="stylesheet" />
 
+    <!-- Styles -->
+    <link rel="stylesheet" href="./styles/main.css" />
+
     <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-    <style>
+    <!-- <style>
       .attribution {
         font-size: 11px;
         text-align: center;
@@ -23,31 +26,38 @@
       .attribution a {
         color: hsl(228, 45%, 44%);
       }
-    </style>
+    </style> -->
   </head>
   <body>
-    <header>
-      <a href="#" aria-label="logo"><img src="./images/logo.svg" alt="logo" /></a>
+    <header class="header">
+      <div class="container">
+        <a href="#" aria-label="logo"><img src="./images/logo.svg" alt="logo" /></a>
+      </div>
     </header>
     <main>
       <div class="hero__img">
-        <img src="./images/hero-mobile.jpg" alt="illustration" />
+        <picture>
+          <source media="(min-width:764px)" srcset="./images/hero-desktop.jpg" />
+          <img src="./images/hero-mobile.jpg" alt="hero-mobile" />
+        </picture>
       </div>
-      <div class="hero__content">
-        <h1><span class="accent-color">We're</span> coming soon</h1>
+      <div class="hero__content container">
+        <h1><span class="accent">We're</span> coming soon</h1>
         <p>Hello fellow shoppers! We're currently building our new fashion store. Add your email below to stay up-to-date with announcements and our launch deals.</p>
         <form>
-          <fieldset>
-            <label for="userEmail" class="sr-only">Email</label>
-            <input type="email" name="userEmail" id="userEmail" placeholder="Email Address" />
-            <input type="submit" />
+          <fieldset class="input-group">
+            <label for="user-email" class="sr-only">Email</label>
+            <input type="email" name="user-email" id="user-email" placeholder="Email Address" />
+            <button aria-label="submit" id="submit">
+              <img src="./images/icon-arrow.svg" alt="arrow" />
+            </button>
           </fieldset>
         </form>
       </div>
     </main>
 
-    <footer>
+    <!-- <footer>
       <p class="attribution">Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. Coded by <a href="#">Your Name Here</a>.</p>
-    </footer>
+    </footer> -->
   </body>
 </html>

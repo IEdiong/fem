@@ -1,0 +1,137 @@
+/* Variables */
+
+/* Reset */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+/* Base Styles */
+body {
+  font-family: 'Josefin Sans', sans-serif;
+  font-weight: 400;
+  color: hsl(0, 36%, 70%);
+  position: relative;
+  padding-bottom: 5rem;
+}
+
+/* Utils */
+.accent {
+  font-family: inherit;
+  color: hsl(0, 36%, 70%);
+  font-weight: 300;
+}
+
+.container {
+  width: 93%;
+  margin-inline: auto;
+  max-width: 520px;
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
+}
+
+/* Mobile Styles */
+.header {
+  padding-block: 1.5rem;
+}
+
+.header a {
+  display: inline-block;
+  width: 40%;
+}
+
+.hero__img img {
+  width: 100%;
+}
+
+.hero__content {
+  padding-top: 3rem;
+  text-align: center;
+}
+
+.hero__content h1 {
+  text-transform: uppercase;
+  font-size: 2.8rem;
+  letter-spacing: 0.2em;
+  color: hsl(0, 6%, 24%);
+  margin-block-end: 1rem;
+}
+
+.hero__content p {
+  line-height: 1.5em;
+  margin-bottom: 3rem;
+}
+
+.input-group {
+  width: 100%;
+  border-radius: 500px;
+  border: 1px solid hsl(0, 36%, 70%);
+  display: flex;
+  overflow: hidden;
+}
+
+.input-group #user-email {
+  height: 50px;
+  display: block;
+  border: none;
+  padding-inline-start: 2em;
+  flex-grow: 1;
+}
+
+.input-group #user-email::placeholder {
+  color: hsl(0, 36%, 80%);
+}
+
+.input-group #submit {
+  width: 80px;
+  border-radius: 100px;
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, hsl(0, 80%, 86%), hsl(0, 74%, 74%));
+}
+
+/* Tablet Styles */
+@media (min-width: 764px) {
+  header,
+  main {
+    width: 60%;
+  }
+  .hero__img {
+    position: absolute;
+    width: 40%;
+    height: 100vh;
+    top: 0;
+    right: 0;
+  }
+
+  .hero__img picture {
+    display: block;
+    height: 100%;
+  }
+
+  .hero__img img {
+    object-fit: cover;
+    height: 100%;
+  }
+}
+
+/* Desktop Styles  */
