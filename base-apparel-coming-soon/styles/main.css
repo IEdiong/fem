@@ -109,12 +109,21 @@ body {
   background: linear-gradient(135deg, hsl(0, 80%, 86%), hsl(0, 74%, 74%));
 }
 
-/* Tablet Styles */
+/* Tablet & Desktop Styles */
 @media (min-width: 764px) {
+  .container {
+    max-width: 450px;
+  }
+
   header,
   main {
     width: 60%;
   }
+
+  .header {
+    padding-block: 3rem;
+  }
+
   .hero__img {
     position: absolute;
     width: 40%;
@@ -132,6 +141,18 @@ body {
     object-fit: cover;
     height: 100%;
   }
-}
 
-/* Desktop Styles  */
+  .hero__content {
+    padding-top: 2rem;
+    text-align: left;
+  }
+
+  .hero__content h1 {
+    font-size: 3rem;
+    line-height: 1.2;
+  }
+
+  .input-group #submit {
+    cursor: pointer;
+  }
+}
