@@ -95,15 +95,36 @@ body {
   font-size: var(--fz-body-mb);
 }
 
+a {
+  color: var(--clr-soft-orange);
+  text-decoration: none;
+}
+
+.cta {
+  background: var(--clr-soft-red);
+  padding: 1rem 2rem;
+  text-transform: uppercase;
+  transition: background 0.4s ease-in-out 1s, color 0.7s ease-in-out;
+}
+
+.cta:hover {
+  background: var(--clr-off-white);
+  color: var(--clr-soft-red);
+}
+
 /* Fonts */
 h1 {
-  font-size: 2em;
+  font-size: 2rem;
+}
+
+.section-one {
+  font-size: 20px;
 }
 
 /* Mobile Styles */
 
 /* Tablet Styles */
-@media screen and (min-width: 400px) {
+@media screen and (min-width: 26.67rem) {
   body {
     font-size: var(--fz-body-tb);
   }
