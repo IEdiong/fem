@@ -2,12 +2,77 @@
 - Variables
 - Reset
 - Base Styles
-- Fonts
+- Utility Styles
 - Mobile Styles
 - Tablet Styles
 - Desktop Styles
 */
 
+/* Reset */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body,
+h1,
+p,
+ul {
+  margin: 0;
+}
+
+/* Base Styles */
 body {
   font-family: 'Libre Franklin', sans-serif;
+}
+
+img {
+  display: inline-block;
+  max-width: 100%;
+}
+
+/* Utility Styles */
+.container {
+  width: 80%;
+  margin-inline: auto;
+  max-width: 1025px;
+}
+
+.sr-only {
+}
+
+/* Mobile Styles */
+
+/** Header */
+.header {
+  text-align: center;
+  margin-block-start: 5rem;
+}
+
+.header img {
+  width: 60px;
+}
+
+.header h1 {
+  margin-block: 3rem 1.5rem;
+  font-size: 22px;
+}
+
+.header .fw-light {
+  font-weight: 300;
+}
+
+/** Footer */
+.footer {
+  text-align: center;
+}
+
+.footer .socials {
+  list-style: none;
+  padding: 0;
+}
+
+.footer a {
+  color: hsl(223, 87%, 63%);
 }
