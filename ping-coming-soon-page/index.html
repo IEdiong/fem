@@ -9,14 +9,16 @@
 
     <title>Frontend Mentor | Ping coming soon page</title>
 
+    <!-- Google fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@300;600;700&display=swap" rel="stylesheet" />
 
-    <link rel="stylesheet" href="style.css" />
+    <!-- Custom stylesheet -->
+    <link rel="stylesheet" href="./styles/index.css" />
 
     <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-    <style>
+    <!-- <style>
       body {
         font-family: 'Libre Franklin', sans-serif;
       }
@@ -27,12 +29,28 @@
       .attribution a {
         color: hsl(228, 45%, 44%);
       }
-    </style>
+    </style> -->
   </head>
   <body>
-    We are launching soon! Subscribe and get notified Notify Me &copy; Copyright Ping. All rights reserved.
+    <header>
+      <img src="./images/logo.svg" alt="ping. logo" />
+      <h1>We are launching soon!</h1>
+      <p>Subscribe and get notified</p>
+    </header>
+    <main>
+      <form>
+        <button>Notify Me</button>
+      </form>
+      <img src="./images/illustration-dashboard.png" alt="dashboard" />
+    </main>
 
     <footer>
+      <ul>
+        <li>facebook</li>
+        <li>twitter</li>
+        <li>instagram</li>
+      </ul>
+      <p>&copy; Copyright Ping. All rights reserved.</p>
       <p class="attribution">Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. Coded by <a href="#">Your Name Here</a>.</p>
     </footer>
   </body>
