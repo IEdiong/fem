@@ -133,3 +133,39 @@ img {
 .footer a {
   color: hsl(223, 87%, 63%);
 }
+
+/* Tablet Styles */
+@media screen and (min-width: 624px) {
+  .container {
+    max-width: 500px;
+  }
+}
+
+/* Desktop Styles */
+@media screen and (min-width: 868px) {
+  .container {
+    max-width: 700px;
+  }
+  .form {
+    display: flex;
+    align-items: center;
+    gap: 1.3rem;
+    margin-block-start: 2rem;
+  }
+
+  .form input[type='email'] {
+    margin: 0;
+  }
+
+  .form button[type='submit'] {
+    width: 300px;
+    margin: 0;
+  }
+
+  .form button[type='submit']:hover,
+  .form button[type='submit']:focus,
+  .form button[type='submit']:link {
+    cursor: pointer;
+    background: hsl(223, 87%, 73%);
+  }
+}
